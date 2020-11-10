@@ -14,7 +14,6 @@ $ npm install
 It install only one additional library `minimist`, needed to parse app arguments.
 
 ## Parse file
-
 Create trace file using openocd:
 ```
 tpiu config internal itm.fifo uart off 170000000
@@ -23,8 +22,8 @@ and trace output:
 ```shell
 $ node index.js --path itm.fifo
 ```
-## Connect to pipe
 
+## Connect to pipe
 Reading via a named pipe works well on POSIX machines; e.g. Linux or macOS, but not Windows.
 ```shell
 $ mkfifo /tmp/itm.fifo
@@ -34,6 +33,7 @@ This will create a named pipe: /tmp/itm.fifo. Then start openocd directing outpu
 ```
 tpiu config internal /tmp/itm.fifo uart off 170000000
 ```
+
 ## Connect to socket
 Start openocd with redirecting trace output to TCP server
 ```
@@ -43,10 +43,12 @@ And start app passing port number:
 ```shell
 node index.js --port 3344 --type socket
 ```
+
 ## Connect to serial port
 TODO:
+
 ## Merging traces 
-Library attempts to merge trace packet in logical chunks, but in some cases, like trace without timestamp this functionality may fail. Passing  `--nomerge`forces library disables merging.
+Library attempts to merge trace packet in logical chunks, but in some cases, like trace without timestamp this functionality may fail. Passing  `--nomerge` forces library to disable merging.
 
 ## Example app output
 ```
