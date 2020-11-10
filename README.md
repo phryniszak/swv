@@ -11,7 +11,7 @@ $ git clone https://github.com/phryniszak/swv.git
 $ cd swv
 $ npm install
 ```
-It install only one additional library `minimist`, needed to parse app arguments.
+It installs only one additional library `minimist`, needed to parse app arguments.
 
 ## Parse file
 Create trace file using openocd:
@@ -77,5 +77,7 @@ TraceITMEvent {
 
 ```
 
-## DISCLAIMER
-This program ITM decoder was inspired by `pyocd` implementation.
+## ACKNOWLEDGMENTS
+
+ITM decoder is taken from [pyocd](https://github.com/pyocd/pyOCD) and converted from python to js with few modification.
+Some inspiration also from [Cortex Debug](https://github.com/Marus/cortex-debug)
