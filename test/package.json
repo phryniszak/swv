@@ -1,0 +1,14 @@
+{
+  "name": "arm_sin_q15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pawel Hryniszak",
+  "license": "ISC",
+  "dependencies": {
+    "serialport": "^9.0.3"
+  }
+}
